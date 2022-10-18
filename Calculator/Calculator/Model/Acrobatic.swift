@@ -11,9 +11,20 @@ struct Acrobatic: Identifiable {
 
 // MARK: - AcrobaticGroup
 
-enum AcrobaticGroup {
+enum AcrobaticGroup: Identifiable {
   case forward
   case backward
   case dive
   case rotation
+
+  var id: Self { self }
+
+  var description : String {
+    switch self {
+    case .forward: return "Forward"
+    case .backward : return "Backward"
+    case .dive: return "Dive"
+    case .rotation: return "Rotation"
+    }
+  }
 }

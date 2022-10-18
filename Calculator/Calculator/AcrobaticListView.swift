@@ -13,7 +13,7 @@ public struct AcrobaticListView: View {
   public var body: some View {
     content
       .sheet(isPresented: $viewModel.isAcrobaticSheetDisplayed) {
-        Text("todo")
+        acrobaticSheet
       }
   }
 }
@@ -25,6 +25,22 @@ extension AcrobaticListView {
         .onTapGesture {
           viewModel.didSelectAcrobatic(acrobatic)
         }
+    }
+  }
+
+  private var acrobaticSheet: some View {
+    VStack {
+      Picker("Group", selection: $viewModel.selectedGroup) {
+        ForEach($viewModel.groups) { group in
+          Text(group.wrappedValue.description)
+        }
+      }.pickerStyle(WheelPickerStyle())
+      List {
+        Text("Entrance")
+        Text("1st element")
+        Text("Landing")
+      }
+      Spacer()
     }
   }
 }
