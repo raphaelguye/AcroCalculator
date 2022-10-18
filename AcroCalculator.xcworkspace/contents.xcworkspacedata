@@ -2,12 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:AcroCalculatorApp/AcroCalculatorApp.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:Calculator/Calculator.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:MCFreestyle/MCFreestyle.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:App/App.xcodeproj">
    </FileRef>
 </Workspace>

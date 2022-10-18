@@ -7,33 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F7C7204028F9800700BB604A /* MainApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C7203F28F9800700BB604A /* MainApp.swift */; };
-		F7C7204228F9800700BB604A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C7204128F9800700BB604A /* ContentView.swift */; };
-		F7C7204428F9800700BB604A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7C7204328F9800700BB604A /* Assets.xcassets */; };
-		F7C7204828F9800700BB604A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7C7204728F9800700BB604A /* Preview Assets.xcassets */; };
-		F7C7205228F9800700BB604A /* AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C7205128F9800700BB604A /* AppTests.swift */; };
-		F7C7209028FD7D1800BB604A /* MCFreestyle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7C7208F28FD7D1800BB604A /* MCFreestyle.framework */; };
-		F7C7209128FD7D1800BB604A /* MCFreestyle.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F7C7208F28FD7D1800BB604A /* MCFreestyle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F7C720CB28FEDE8700BB604A /* AcroCalculatorAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C720CA28FEDE8700BB604A /* AcroCalculatorAppApp.swift */; };
+		F7C720CD28FEDE8700BB604A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C720CC28FEDE8700BB604A /* ContentView.swift */; };
+		F7C720CF28FEDE8800BB604A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7C720CE28FEDE8800BB604A /* Assets.xcassets */; };
+		F7C720D328FEDE8800BB604A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7C720D228FEDE8800BB604A /* Preview Assets.xcassets */; };
+		F7C720DD28FEDE8800BB604A /* AcroCalculatorAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C720DC28FEDE8800BB604A /* AcroCalculatorAppTests.swift */; };
+		F7C720F728FEDED200BB604A /* MCFreestyle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7C720F628FEDED200BB604A /* MCFreestyle.framework */; };
+		F7C720F828FEDED200BB604A /* MCFreestyle.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F7C720F628FEDED200BB604A /* MCFreestyle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		F7C7204E28F9800700BB604A /* PBXContainerItemProxy */ = {
+		F7C720D928FEDE8800BB604A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = F7C7203428F9800700BB604A /* Project object */;
+			containerPortal = F7C720BF28FEDE8700BB604A /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = F7C7203B28F9800700BB604A;
-			remoteInfo = App;
+			remoteGlobalIDString = F7C720C628FEDE8700BB604A;
+			remoteInfo = AcroCalculatorApp;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		F7C7209228FD7D1800BB604A /* Embed Frameworks */ = {
+		F7C720F928FEDED300BB604A /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				F7C7209128FD7D1800BB604A /* MCFreestyle.framework in Embed Frameworks */,
+				F7C720F828FEDED200BB604A /* MCFreestyle.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -41,27 +41,27 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		F7C7203C28F9800700BB604A /* App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = App.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		F7C7203F28F9800700BB604A /* MainApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainApp.swift; sourceTree = "<group>"; };
-		F7C7204128F9800700BB604A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		F7C7204328F9800700BB604A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		F7C7204528F9800700BB604A /* App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = App.entitlements; sourceTree = "<group>"; };
-		F7C7204728F9800700BB604A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		F7C7204D28F9800700BB604A /* AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F7C7205128F9800700BB604A /* AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTests.swift; sourceTree = "<group>"; };
-		F7C7208F28FD7D1800BB604A /* MCFreestyle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MCFreestyle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7C720C728FEDE8700BB604A /* AcroCalculatorApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AcroCalculatorApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7C720CA28FEDE8700BB604A /* AcroCalculatorAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcroCalculatorAppApp.swift; sourceTree = "<group>"; };
+		F7C720CC28FEDE8700BB604A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		F7C720CE28FEDE8800BB604A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F7C720D028FEDE8800BB604A /* AcroCalculatorApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AcroCalculatorApp.entitlements; sourceTree = "<group>"; };
+		F7C720D228FEDE8800BB604A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F7C720D828FEDE8800BB604A /* AcroCalculatorAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AcroCalculatorAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7C720DC28FEDE8800BB604A /* AcroCalculatorAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcroCalculatorAppTests.swift; sourceTree = "<group>"; };
+		F7C720F628FEDED200BB604A /* MCFreestyle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MCFreestyle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		F7C7203928F9800700BB604A /* Frameworks */ = {
+		F7C720C428FEDE8700BB604A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F7C7209028FD7D1800BB604A /* MCFreestyle.framework in Frameworks */,
+				F7C720F728FEDED200BB604A /* MCFreestyle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F7C7204A28F9800700BB604A /* Frameworks */ = {
+		F7C720D528FEDE8800BB604A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -71,57 +71,57 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		F7C7203328F9800700BB604A = {
+		F7C720BE28FEDE8700BB604A = {
 			isa = PBXGroup;
 			children = (
-				F7C7203E28F9800700BB604A /* App */,
-				F7C7205028F9800700BB604A /* AppTests */,
-				F7C7203D28F9800700BB604A /* Products */,
-				F7C7208E28FD7D1800BB604A /* Frameworks */,
+				F7C720C928FEDE8700BB604A /* AcroCalculatorApp */,
+				F7C720DB28FEDE8800BB604A /* AcroCalculatorAppTests */,
+				F7C720C828FEDE8700BB604A /* Products */,
+				F7C720F528FEDED200BB604A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		F7C7203D28F9800700BB604A /* Products */ = {
+		F7C720C828FEDE8700BB604A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F7C7203C28F9800700BB604A /* App.app */,
-				F7C7204D28F9800700BB604A /* AppTests.xctest */,
+				F7C720C728FEDE8700BB604A /* AcroCalculatorApp.app */,
+				F7C720D828FEDE8800BB604A /* AcroCalculatorAppTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		F7C7203E28F9800700BB604A /* App */ = {
+		F7C720C928FEDE8700BB604A /* AcroCalculatorApp */ = {
 			isa = PBXGroup;
 			children = (
-				F7C7203F28F9800700BB604A /* MainApp.swift */,
-				F7C7204128F9800700BB604A /* ContentView.swift */,
-				F7C7204328F9800700BB604A /* Assets.xcassets */,
-				F7C7204528F9800700BB604A /* App.entitlements */,
-				F7C7204628F9800700BB604A /* Preview Content */,
+				F7C720CA28FEDE8700BB604A /* AcroCalculatorAppApp.swift */,
+				F7C720CC28FEDE8700BB604A /* ContentView.swift */,
+				F7C720CE28FEDE8800BB604A /* Assets.xcassets */,
+				F7C720D028FEDE8800BB604A /* AcroCalculatorApp.entitlements */,
+				F7C720D128FEDE8800BB604A /* Preview Content */,
 			);
-			path = App;
+			path = AcroCalculatorApp;
 			sourceTree = "<group>";
 		};
-		F7C7204628F9800700BB604A /* Preview Content */ = {
+		F7C720D128FEDE8800BB604A /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				F7C7204728F9800700BB604A /* Preview Assets.xcassets */,
+				F7C720D228FEDE8800BB604A /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		F7C7205028F9800700BB604A /* AppTests */ = {
+		F7C720DB28FEDE8800BB604A /* AcroCalculatorAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				F7C7205128F9800700BB604A /* AppTests.swift */,
+				F7C720DC28FEDE8800BB604A /* AcroCalculatorAppTests.swift */,
 			);
-			path = AppTests;
+			path = AcroCalculatorAppTests;
 			sourceTree = "<group>";
 		};
-		F7C7208E28FD7D1800BB604A /* Frameworks */ = {
+		F7C720F528FEDED200BB604A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				F7C7208F28FD7D1800BB604A /* MCFreestyle.framework */,
+				F7C720F628FEDED200BB604A /* MCFreestyle.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -129,62 +129,62 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F7C7203B28F9800700BB604A /* App */ = {
+		F7C720C628FEDE8700BB604A /* AcroCalculatorApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F7C7206128F9800700BB604A /* Build configuration list for PBXNativeTarget "App" */;
+			buildConfigurationList = F7C720EC28FEDE8800BB604A /* Build configuration list for PBXNativeTarget "AcroCalculatorApp" */;
 			buildPhases = (
-				F7C7203828F9800700BB604A /* Sources */,
-				F7C7203928F9800700BB604A /* Frameworks */,
-				F7C7203A28F9800700BB604A /* Resources */,
-				F7C7209228FD7D1800BB604A /* Embed Frameworks */,
+				F7C720C328FEDE8700BB604A /* Sources */,
+				F7C720C428FEDE8700BB604A /* Frameworks */,
+				F7C720C528FEDE8700BB604A /* Resources */,
+				F7C720F928FEDED300BB604A /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = App;
-			productName = App;
-			productReference = F7C7203C28F9800700BB604A /* App.app */;
+			name = AcroCalculatorApp;
+			productName = AcroCalculatorApp;
+			productReference = F7C720C728FEDE8700BB604A /* AcroCalculatorApp.app */;
 			productType = "com.apple.product-type.application";
 		};
-		F7C7204C28F9800700BB604A /* AppTests */ = {
+		F7C720D728FEDE8800BB604A /* AcroCalculatorAppTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F7C7206428F9800700BB604A /* Build configuration list for PBXNativeTarget "AppTests" */;
+			buildConfigurationList = F7C720EF28FEDE8800BB604A /* Build configuration list for PBXNativeTarget "AcroCalculatorAppTests" */;
 			buildPhases = (
-				F7C7204928F9800700BB604A /* Sources */,
-				F7C7204A28F9800700BB604A /* Frameworks */,
-				F7C7204B28F9800700BB604A /* Resources */,
+				F7C720D428FEDE8800BB604A /* Sources */,
+				F7C720D528FEDE8800BB604A /* Frameworks */,
+				F7C720D628FEDE8800BB604A /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				F7C7204F28F9800700BB604A /* PBXTargetDependency */,
+				F7C720DA28FEDE8800BB604A /* PBXTargetDependency */,
 			);
-			name = AppTests;
-			productName = AppTests;
-			productReference = F7C7204D28F9800700BB604A /* AppTests.xctest */;
+			name = AcroCalculatorAppTests;
+			productName = AcroCalculatorAppTests;
+			productReference = F7C720D828FEDE8800BB604A /* AcroCalculatorAppTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		F7C7203428F9800700BB604A /* Project object */ = {
+		F7C720BF28FEDE8700BB604A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1400;
 				LastUpgradeCheck = 1400;
 				TargetAttributes = {
-					F7C7203B28F9800700BB604A = {
+					F7C720C628FEDE8700BB604A = {
 						CreatedOnToolsVersion = 14.0.1;
 					};
-					F7C7204C28F9800700BB604A = {
+					F7C720D728FEDE8800BB604A = {
 						CreatedOnToolsVersion = 14.0.1;
-						TestTargetID = F7C7203B28F9800700BB604A;
+						TestTargetID = F7C720C628FEDE8700BB604A;
 					};
 				};
 			};
-			buildConfigurationList = F7C7203728F9800700BB604A /* Build configuration list for PBXProject "App" */;
+			buildConfigurationList = F7C720C228FEDE8700BB604A /* Build configuration list for PBXProject "AcroCalculatorApp" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -192,28 +192,28 @@
 				en,
 				Base,
 			);
-			mainGroup = F7C7203328F9800700BB604A;
-			productRefGroup = F7C7203D28F9800700BB604A /* Products */;
+			mainGroup = F7C720BE28FEDE8700BB604A;
+			productRefGroup = F7C720C828FEDE8700BB604A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F7C7203B28F9800700BB604A /* App */,
-				F7C7204C28F9800700BB604A /* AppTests */,
+				F7C720C628FEDE8700BB604A /* AcroCalculatorApp */,
+				F7C720D728FEDE8800BB604A /* AcroCalculatorAppTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		F7C7203A28F9800700BB604A /* Resources */ = {
+		F7C720C528FEDE8700BB604A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F7C7204828F9800700BB604A /* Preview Assets.xcassets in Resources */,
-				F7C7204428F9800700BB604A /* Assets.xcassets in Resources */,
+				F7C720D328FEDE8800BB604A /* Preview Assets.xcassets in Resources */,
+				F7C720CF28FEDE8800BB604A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F7C7204B28F9800700BB604A /* Resources */ = {
+		F7C720D628FEDE8800BB604A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -223,35 +223,35 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		F7C7203828F9800700BB604A /* Sources */ = {
+		F7C720C328FEDE8700BB604A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F7C7204228F9800700BB604A /* ContentView.swift in Sources */,
-				F7C7204028F9800700BB604A /* MainApp.swift in Sources */,
+				F7C720CD28FEDE8700BB604A /* ContentView.swift in Sources */,
+				F7C720CB28FEDE8700BB604A /* AcroCalculatorAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F7C7204928F9800700BB604A /* Sources */ = {
+		F7C720D428FEDE8800BB604A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F7C7205228F9800700BB604A /* AppTests.swift in Sources */,
+				F7C720DD28FEDE8800BB604A /* AcroCalculatorAppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		F7C7204F28F9800700BB604A /* PBXTargetDependency */ = {
+		F7C720DA28FEDE8800BB604A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = F7C7203B28F9800700BB604A /* App */;
-			targetProxy = F7C7204E28F9800700BB604A /* PBXContainerItemProxy */;
+			target = F7C720C628FEDE8700BB604A /* AcroCalculatorApp */;
+			targetProxy = F7C720D928FEDE8800BB604A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		F7C7205F28F9800700BB604A /* Debug */ = {
+		F7C720EA28FEDE8800BB604A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -309,7 +309,7 @@
 			};
 			name = Debug;
 		};
-		F7C7206028F9800700BB604A /* Release */ = {
+		F7C720EB28FEDE8800BB604A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -360,15 +360,15 @@
 			};
 			name = Release;
 		};
-		F7C7206228F9800700BB604A /* Debug */ = {
+		F7C720ED28FEDE8800BB604A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = App/App.entitlements;
+				CODE_SIGN_ENTITLEMENTS = AcroCalculatorApp/AcroCalculatorApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"App/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"AcroCalculatorApp/Preview Content\"";
 				DEVELOPMENT_TEAM = V22FY27QPA;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
@@ -388,7 +388,7 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 12.3;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = ch.ragu.acrocalculator.App;
+				PRODUCT_BUNDLE_IDENTIFIER = ch.ragu.acrocalculator.feature.AcroCalculatorApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
@@ -398,15 +398,15 @@
 			};
 			name = Debug;
 		};
-		F7C7206328F9800700BB604A /* Release */ = {
+		F7C720EE28FEDE8800BB604A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = App/App.entitlements;
+				CODE_SIGN_ENTITLEMENTS = AcroCalculatorApp/AcroCalculatorApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"App/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"AcroCalculatorApp/Preview Content\"";
 				DEVELOPMENT_TEAM = V22FY27QPA;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
@@ -426,7 +426,7 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 12.3;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = ch.ragu.acrocalculator.App;
+				PRODUCT_BUNDLE_IDENTIFIER = ch.ragu.acrocalculator.feature.AcroCalculatorApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
@@ -436,7 +436,7 @@
 			};
 			name = Release;
 		};
-		F7C7206528F9800700BB604A /* Debug */ = {
+		F7C720F028FEDE8800BB604A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -448,18 +448,18 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MACOSX_DEPLOYMENT_TARGET = 12.3;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = ch.ragu.acrocalculator.AppTests;
+				PRODUCT_BUNDLE_IDENTIFIER = ch.ragu.acrocalculator.feature.AcroCalculatorAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/App";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AcroCalculatorApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/AcroCalculatorApp";
 			};
 			name = Debug;
 		};
-		F7C7206628F9800700BB604A /* Release */ = {
+		F7C720F128FEDE8800BB604A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -471,48 +471,48 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MACOSX_DEPLOYMENT_TARGET = 12.3;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = ch.ragu.acrocalculator.AppTests;
+				PRODUCT_BUNDLE_IDENTIFIER = ch.ragu.acrocalculator.feature.AcroCalculatorAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/App";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AcroCalculatorApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/AcroCalculatorApp";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F7C7203728F9800700BB604A /* Build configuration list for PBXProject "App" */ = {
+		F7C720C228FEDE8700BB604A /* Build configuration list for PBXProject "AcroCalculatorApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F7C7205F28F9800700BB604A /* Debug */,
-				F7C7206028F9800700BB604A /* Release */,
+				F7C720EA28FEDE8800BB604A /* Debug */,
+				F7C720EB28FEDE8800BB604A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F7C7206128F9800700BB604A /* Build configuration list for PBXNativeTarget "App" */ = {
+		F7C720EC28FEDE8800BB604A /* Build configuration list for PBXNativeTarget "AcroCalculatorApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F7C7206228F9800700BB604A /* Debug */,
-				F7C7206328F9800700BB604A /* Release */,
+				F7C720ED28FEDE8800BB604A /* Debug */,
+				F7C720EE28FEDE8800BB604A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F7C7206428F9800700BB604A /* Build configuration list for PBXNativeTarget "AppTests" */ = {
+		F7C720EF28FEDE8800BB604A /* Build configuration list for PBXNativeTarget "AcroCalculatorAppTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F7C7206528F9800700BB604A /* Debug */,
-				F7C7206628F9800700BB604A /* Release */,
+				F7C720F028FEDE8800BB604A /* Debug */,
+				F7C720F128FEDE8800BB604A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = F7C7203428F9800700BB604A /* Project object */;
+	rootObject = F7C720BF28FEDE8700BB604A /* Project object */;
 }
