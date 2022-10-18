@@ -11,6 +11,7 @@
 		F7C720AB28FD7F4E00BB604A /* CalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C720AA28FD7F4E00BB604A /* CalculatorTests.swift */; };
 		F7C720B628FD7FA700BB604A /* AcrobaticListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C720B528FD7FA700BB604A /* AcrobaticListView.swift */; };
 		F7C720B828FD7FF100BB604A /* AcrobaticListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C720B728FD7FF100BB604A /* AcrobaticListViewModel.swift */; };
+		F7C720FB28FEE61400BB604A /* Acrobatic.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C720FA28FEE61400BB604A /* Acrobatic.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		F7C720AA28FD7F4E00BB604A /* CalculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorTests.swift; sourceTree = "<group>"; };
 		F7C720B528FD7FA700BB604A /* AcrobaticListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcrobaticListView.swift; sourceTree = "<group>"; };
 		F7C720B728FD7FF100BB604A /* AcrobaticListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcrobaticListViewModel.swift; sourceTree = "<group>"; };
+		F7C720FA28FEE61400BB604A /* Acrobatic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Acrobatic.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 		F7C7209F28FD7F4E00BB604A /* Calculator */ = {
 			isa = PBXGroup;
 			children = (
+				F7C720FC28FEE62E00BB604A /* Model */,
 				F7C720B528FD7FA700BB604A /* AcrobaticListView.swift */,
 				F7C720B728FD7FF100BB604A /* AcrobaticListViewModel.swift */,
 			);
@@ -83,6 +86,14 @@
 				F7C720AA28FD7F4E00BB604A /* CalculatorTests.swift */,
 			);
 			path = CalculatorTests;
+			sourceTree = "<group>";
+		};
+		F7C720FC28FEE62E00BB604A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F7C720FA28FEE61400BB604A /* Acrobatic.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,6 +206,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F7C720B628FD7FA700BB604A /* AcrobaticListView.swift in Sources */,
+				F7C720FB28FEE61400BB604A /* Acrobatic.swift in Sources */,
 				F7C720B828FD7FF100BB604A /* AcrobaticListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -11,10 +11,20 @@ public struct AcrobaticListView: View {
   }
 
   public var body: some View {
-    List {
-      ForEach(0..<viewModel.nbOfAcrobatics, id: \.self) {
-        Text("Acro \($0+1)")
+    content
+      .sheet(isPresented: $viewModel.isAcrobaticSheetDisplayed) {
+        Text("todo")
       }
+  }
+}
+
+extension AcrobaticListView {
+  private var content: some View {
+    List(viewModel.acrobatics) { acrobatic in
+      Text("Acro \(acrobatic.id)")
+        .onTapGesture {
+          viewModel.didSelectAcrobatic(acrobatic)
+        }
     }
   }
 }
