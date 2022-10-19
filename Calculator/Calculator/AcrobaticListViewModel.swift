@@ -1,15 +1,27 @@
 import Foundation
+import SwiftUI
+
+// MARK: - AcrobaticListViewModel
 
 public class AcrobaticListViewModel: ObservableObject {
 
   // MARK: Lifecycle
 
-  public init(nbOfAcrobatics: Int) {
-    groups = [.forward, .backward, .dive, .rotation]
-    acrobatics = []
-    for _ in 0..<nbOfAcrobatics {
-      acrobatics.append(.init())
+  private init(nbOfAcrobatics: Int, acrobatics: [Acrobatic]) {
+    groups = [.notAssigned, .forward, .backward, .dive, .rotation]
+    self.acrobatics = acrobatics
+  }
+
+  public convenience init(acrobatics: [Acrobatic]) {
+    self.init(nbOfAcrobatics: acrobatics.count, acrobatics: acrobatics)
+  }
+
+  public convenience init(nbOfAcrobatics: Int) {
+    var acrobatics: [Acrobatic] = []
+    for i in 0..<nbOfAcrobatics {
+      acrobatics.append(.init(position: i+1))
     }
+    self.init(nbOfAcrobatics: nbOfAcrobatics, acrobatics: acrobatics)
   }
 
   public convenience init() {
@@ -21,18 +33,41 @@ public class AcrobaticListViewModel: ObservableObject {
   @Published var acrobatics: [Acrobatic]
   @Published var groups: [AcrobaticGroup]
   @Published var isAcrobaticSheetDisplayed = false
-  var selectedGroup: AcrobaticGroup?
+  @Published var selectedGroup: AcrobaticGroup = .notAssigned
 
+  // MARK: Private
+
+  private var selectedAcrobaticIndex: Int?
+}
+
+extension AcrobaticListViewModel {
   func didSelectAcrobatic(_ acrobatic: Acrobatic) {
     isAcrobaticSheetDisplayed = true
+    selectedAcrobaticIndex = acrobatics.firstIndex { acrobatic.id == $0.id }
+    if let index = selectedAcrobaticIndex {
+      selectedGroup = acrobatics[index].group
+    }
   }
 
   func didCancelSheet() {
-    isAcrobaticSheetDisplayed = false
+    resetSheetSelection()
   }
 
   func didSaveSheet() {
-    isAcrobaticSheetDisplayed = false
+    Task {
+      await MainActor.run {
+        if let index = selectedAcrobaticIndex {
+          acrobatics[index].group = selectedGroup
+        }
+        resetSheetSelection()
+      }
+    }
   }
+}
 
+extension AcrobaticListViewModel {
+  private func resetSheetSelection() {
+    isAcrobaticSheetDisplayed = false
+    selectedAcrobaticIndex = nil
+  }
 }

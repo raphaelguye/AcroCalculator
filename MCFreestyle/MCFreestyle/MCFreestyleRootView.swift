@@ -8,7 +8,7 @@ public struct MCFreestyleRootView: View {
   public init() {
     // empty
   }
- 
+
   public var body: some View {
     NavigationView {
       AcrobaticListView(

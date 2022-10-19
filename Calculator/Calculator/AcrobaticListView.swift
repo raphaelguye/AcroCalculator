@@ -7,7 +7,7 @@ public struct AcrobaticListView: View {
   // MARK: Lifecycle
 
   public init(viewModel: AcrobaticListViewModel) {
-    self.viewModel = viewModel
+    _viewModel = StateObject(wrappedValue: viewModel)
   }
 
   // MARK: Public
@@ -21,14 +21,14 @@ public struct AcrobaticListView: View {
 
   // MARK: Internal
 
-  @ObservedObject var viewModel: AcrobaticListViewModel
+  @StateObject var viewModel: AcrobaticListViewModel
 
 }
 
 extension AcrobaticListView {
   private var content: some View {
     List(viewModel.acrobatics) { acrobatic in
-      Text("Acro \(acrobatic.id)")
+      acrobaticCell(for: acrobatic)
         .onTapGesture {
           viewModel.didSelectAcrobatic(acrobatic)
         }
@@ -53,6 +53,16 @@ extension AcrobaticListView {
       .navigationTitle("Acrobatic")
       .navigationBarTitleDisplayMode(.inline)
       .toolbar(content: toolBarContent)
+    }
+  }
+
+  private func acrobaticCell(for acrobatic: Acrobatic) -> some View {
+    VStack(alignment: .leading) {
+      Text("Element \(acrobatic.position)")
+        .fontWeight(.bold)
+      if acrobatic.isFilled() {
+        Text(acrobatic.group.description)
+      }
     }
   }
 
@@ -81,7 +91,13 @@ extension AcrobaticListView {
 struct AcrobaticListView_Previews: PreviewProvider {
   static var previews: some View {
     AcrobaticListView(
-      viewModel: AcrobaticListViewModel()
+      viewModel: AcrobaticListViewModel(
+        acrobatics: [
+          .init(position: 1, group: .forward),
+          .init(position: 2, group: .dive),
+          .init(position: 3),
+        ]
+      )
     )
   }
 }

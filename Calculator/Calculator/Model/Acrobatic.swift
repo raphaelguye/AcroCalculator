@@ -2,29 +2,38 @@ import Foundation
 
 // MARK: - Acrobatic
 
-struct Acrobatic: Identifiable {
+public struct Acrobatic: Identifiable {
 
-  var id = UUID.init().uuidString
-  var group: AcrobaticGroup?
+  public var id = UUID.init().uuidString
+  public var position: Int
+  public var group: AcrobaticGroup = .notAssigned
 
+}
+
+extension Acrobatic {
+  public func isFilled() -> Bool {
+    group != .notAssigned
+  }
 }
 
 // MARK: - AcrobaticGroup
 
-enum AcrobaticGroup: Identifiable {
+public enum AcrobaticGroup: Identifiable {
+  case notAssigned
   case forward
   case backward
   case dive
   case rotation
 
-  var id: Self { self }
+  public var id: Self { self }
 
-  var description : String {
+  public var description : String {
     switch self {
     case .forward: return "Forward"
     case .backward : return "Backward"
     case .dive: return "Dive"
     case .rotation: return "Rotation"
+    case .notAssigned: return ""
     }
   }
 }
