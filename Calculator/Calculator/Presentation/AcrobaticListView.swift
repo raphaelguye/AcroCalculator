@@ -41,13 +41,13 @@ extension AcrobaticListView {
           }
         }.pickerStyle(WheelPickerStyle())
         List {
-          detailCell("Entrance", compositionType: .entrance) {
+          detailCell(for: .entrance) {
             //TODO:
           }
-          detailCell("1st element", compositionType: .firstFigure) {
+          detailCell(for: .firstFigure) {
             //TODO:
           }
-          detailCell("Landing", compositionType: .landing) {
+          detailCell(for: .landing) {
             //TODO:
           }
         }
@@ -76,7 +76,7 @@ extension AcrobaticListView {
     }
   }
 
-  private func detailCell(_ placeholder: String, compositionType: CompositionType, action: @escaping () -> Void) -> some View {
+  private func detailCell(for compositionType: CompositionType, action: @escaping () -> Void) -> some View {
     NavigationLink {
       CompositionListView(
         viewModel: CompositionListViewModel(
@@ -84,10 +84,10 @@ extension AcrobaticListView {
           acrobaticRepository: FakeAcrobaticRepository() //TODO: Inject a repository received in parameter of the module
         )
       )
-      .navigationTitle(placeholder)
+      .navigationTitle(compositionType.description)
     } label: {
       HStack {
-        Text(placeholder)
+        Text(compositionType.description)
         Spacer()
         Text("selection")
       }
