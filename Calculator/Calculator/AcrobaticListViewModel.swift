@@ -35,9 +35,7 @@ public class AcrobaticListViewModel: ObservableObject {
   @Published var isAcrobaticSheetDisplayed = false
   @Published var selectedGroup: AcrobaticGroup = .notAssigned
 
-  // MARK: Private
-
-  private var selectedAcrobaticIndex: Int?
+  var selectedAcrobaticIndex: Int?
 }
 
 extension AcrobaticListViewModel {
@@ -54,14 +52,10 @@ extension AcrobaticListViewModel {
   }
 
   func didSaveSheet() {
-    Task {
-      await MainActor.run {
-        if let index = selectedAcrobaticIndex {
-          acrobatics[index].group = selectedGroup
-        }
-        resetSheetSelection()
-      }
+    if let index = selectedAcrobaticIndex {
+      acrobatics[index].group = selectedGroup
     }
+    resetSheetSelection()
   }
 }
 
