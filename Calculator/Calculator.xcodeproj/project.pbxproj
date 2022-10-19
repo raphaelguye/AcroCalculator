@@ -14,8 +14,9 @@
 		F7C720FE2900246600BB604A /* AcrobaticListViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C720FD2900246600BB604A /* AcrobaticListViewModelTest.swift */; };
 		F7C8C2B6290052CF00F69E9C /* CompositionListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C8C2B5290052CF00F69E9C /* CompositionListView.swift */; };
 		F7C8C2BA290056AF00F69E9C /* AcrobaticRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C8C2B9290056AF00F69E9C /* AcrobaticRepositoryProtocol.swift */; };
-		F7C8C2BC2900570500F69E9C /* Entrance.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C8C2BB2900570500F69E9C /* Entrance.swift */; };
 		F7C8C2BE290057A200F69E9C /* CompositionListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C8C2BD290057A200F69E9C /* CompositionListViewModel.swift */; };
+		F7C8C2C029009E1D00F69E9C /* Figure.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C8C2BF29009E1D00F69E9C /* Figure.swift */; };
+		F7C8C2C429009F8200F69E9C /* CompositionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C8C2C329009F8200F69E9C /* CompositionType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,8 +38,9 @@
 		F7C720FD2900246600BB604A /* AcrobaticListViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcrobaticListViewModelTest.swift; sourceTree = "<group>"; };
 		F7C8C2B5290052CF00F69E9C /* CompositionListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompositionListView.swift; sourceTree = "<group>"; };
 		F7C8C2B9290056AF00F69E9C /* AcrobaticRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcrobaticRepositoryProtocol.swift; sourceTree = "<group>"; };
-		F7C8C2BB2900570500F69E9C /* Entrance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entrance.swift; sourceTree = "<group>"; };
 		F7C8C2BD290057A200F69E9C /* CompositionListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompositionListViewModel.swift; sourceTree = "<group>"; };
+		F7C8C2BF29009E1D00F69E9C /* Figure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Figure.swift; sourceTree = "<group>"; };
+		F7C8C2C329009F8200F69E9C /* CompositionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompositionType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,7 +102,8 @@
 			isa = PBXGroup;
 			children = (
 				F7C720FA28FEE61400BB604A /* Acrobatic.swift */,
-				F7C8C2BB2900570500F69E9C /* Entrance.swift */,
+				F7C8C2BF29009E1D00F69E9C /* Figure.swift */,
+				F7C8C2C329009F8200F69E9C /* CompositionType.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -233,10 +236,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7C8C2C429009F8200F69E9C /* CompositionType.swift in Sources */,
 				F7C720B628FD7FA700BB604A /* AcrobaticListView.swift in Sources */,
+				F7C8C2C029009E1D00F69E9C /* Figure.swift in Sources */,
 				F7C720FB28FEE61400BB604A /* Acrobatic.swift in Sources */,
 				F7C8C2BA290056AF00F69E9C /* AcrobaticRepositoryProtocol.swift in Sources */,
-				F7C8C2BC2900570500F69E9C /* Entrance.swift in Sources */,
 				F7C720B828FD7FF100BB604A /* AcrobaticListViewModel.swift in Sources */,
 				F7C8C2BE290057A200F69E9C /* CompositionListViewModel.swift in Sources */,
 				F7C8C2B6290052CF00F69E9C /* CompositionListView.swift in Sources */,

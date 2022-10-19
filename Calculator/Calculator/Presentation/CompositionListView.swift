@@ -20,8 +20,8 @@ struct CompositionListView: View {
 
 extension CompositionListView {
   private var content: some View {
-    List(viewModel.entrances) { entrance in
-      Text(entrance.title)
+    List(viewModel.figures) { figure in
+      Text(figure.title)
     }
   }
 }
@@ -32,6 +32,7 @@ struct CompositionListView_Previews: PreviewProvider {
   static var previews: some View {
     CompositionListView(
       viewModel: CompositionListViewModel(
+        compositionType: .firstFigure,
         acrobaticRepository: FakeAcrobaticRepository()
       )
     )
