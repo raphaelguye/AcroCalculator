@@ -23,18 +23,6 @@ public struct AcrobaticListView: View {
 
   @ObservedObject var viewModel: AcrobaticListViewModel
 
-  // MARK: Private
-
-  private var groupPickerStyle: some PickerStyle {
-    get {
-      #if os(macOS)
-      SegmentedPickerStyle()
-      #else
-      WheelPickerStyle()
-      #endif
-    }
-  }
-
 }
 
 extension AcrobaticListView {
@@ -48,18 +36,42 @@ extension AcrobaticListView {
   }
 
   private var acrobaticSheet: some View {
-    VStack {
-      Picker("Group", selection: $viewModel.selectedGroup) {
-        ForEach($viewModel.groups) { group in
-          Text(group.wrappedValue.description)
+    NavigationView {
+      VStack {
+        Picker("Group", selection: $viewModel.selectedGroup) {
+          ForEach($viewModel.groups) { group in
+            Text(group.wrappedValue.description)
+          }
+        }.pickerStyle(WheelPickerStyle())
+        List {
+          Text("Entrance")
+          Text("1st element")
+          Text("Landing")
         }
-      }.pickerStyle(groupPickerStyle)
-      List {
-        Text("Entrance")
-        Text("1st element")
-        Text("Landing")
+        Spacer()
       }
-      Spacer()
+      .navigationTitle("Acrobatic")
+      .navigationBarTitleDisplayMode(.inline)
+      .toolbar(content: toolBarContent)
+    }
+  }
+
+  @ToolbarContentBuilder
+  private func toolBarContent() -> some ToolbarContent {
+    ToolbarItemGroup(placement: .navigationBarLeading) {
+      Button {
+        viewModel.didCancelSheet()
+      } label: {
+        Text("Cancel")
+      }
+    }
+
+    ToolbarItemGroup(placement: .navigationBarTrailing) {
+      Button {
+        viewModel.didSaveSheet()
+      } label: {
+        Text("Save")
+      }
     }
   }
 }
