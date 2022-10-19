@@ -28,7 +28,7 @@ public struct AcrobaticListView: View {
 extension AcrobaticListView {
   private var content: some View {
     List(viewModel.acrobatics) { acrobatic in
-      acrobaticCell(for: acrobatic)
+      listCell(for: acrobatic)
     }
   }
 
@@ -41,9 +41,15 @@ extension AcrobaticListView {
           }
         }.pickerStyle(WheelPickerStyle())
         List {
-          Text("Entrance")
-          Text("1st element")
-          Text("Landing")
+          detailCell("Entrance") {
+            //TODO:
+          }
+          detailCell("1st element") {
+            //TODO:
+          }
+          detailCell("Landing") {
+            //TODO:
+          }
         }
         Spacer()
       }
@@ -53,7 +59,7 @@ extension AcrobaticListView {
     }
   }
 
-  private func acrobaticCell(for acrobatic: Acrobatic) -> some View {
+  private func listCell(for acrobatic: Acrobatic) -> some View {
     Button {
       viewModel.didSelectAcrobatic(acrobatic)
     } label: {
@@ -66,6 +72,17 @@ extension AcrobaticListView {
           }
         }
         Spacer()
+      }
+    }
+  }
+
+  private func detailCell(_ placeholder: String, action: @escaping () -> Void) -> some View {
+    Button(action: action) {
+      HStack {
+        Text(placeholder)
+        Spacer()
+        Text("selection")
+        Image(systemName: "chevron.right").font(.body)
       }
     }
   }
