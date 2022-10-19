@@ -29,9 +29,6 @@ extension AcrobaticListView {
   private var content: some View {
     List(viewModel.acrobatics) { acrobatic in
       acrobaticCell(for: acrobatic)
-        .onTapGesture {
-          viewModel.didSelectAcrobatic(acrobatic)
-        }
     }
   }
 
@@ -57,11 +54,18 @@ extension AcrobaticListView {
   }
 
   private func acrobaticCell(for acrobatic: Acrobatic) -> some View {
-    VStack(alignment: .leading) {
-      Text("Element \(acrobatic.position)")
-        .fontWeight(.bold)
-      if acrobatic.isFilled() {
-        Text(acrobatic.group.description)
+    Button {
+      viewModel.didSelectAcrobatic(acrobatic)
+    } label: {
+      HStack {
+        VStack(alignment: .leading) {
+          Text("Element \(acrobatic.position)")
+            .fontWeight(.bold)
+          if acrobatic.isFilled() {
+            Text(acrobatic.group.description)
+          }
+        }
+        Spacer()
       }
     }
   }
