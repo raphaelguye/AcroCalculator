@@ -78,8 +78,12 @@ extension AcrobaticListView {
 
   private func detailCell(_ placeholder: String, action: @escaping () -> Void) -> some View {
     NavigationLink {
-      CompositionListView()
-        .navigationTitle(placeholder)
+      CompositionListView(
+        viewModel: CompositionListViewModel(
+          acrobaticRepository: FakeAcrobaticRepository() //TODO: Inject a repository received in parameter of the module
+        )
+      )
+      .navigationTitle(placeholder)
     } label: {
       HStack {
         Text(placeholder)
