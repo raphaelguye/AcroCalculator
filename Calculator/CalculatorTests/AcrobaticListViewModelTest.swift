@@ -24,7 +24,8 @@ final class AcrobaticListViewModelTest: XCTestCase {
     assertViewModelInitialized(viewModel, nbOfAcrobatics: nbOfAcrobatics)
   }
 
-  func testDidSelectAcrobaticAndCancel() throws {
+  @MainActor
+  func testDidSelectAcrobaticAndCancel() async throws {
     // Arrange
     let viewModel = AcrobaticListViewModel()
     guard let selectedAcrobatic = viewModel.acrobatics.first else {
@@ -33,6 +34,8 @@ final class AcrobaticListViewModelTest: XCTestCase {
 
     // Act 1
     viewModel.didSelectAcrobatic(selectedAcrobatic)
+
+    await Task.yield()
 
     // Assert 1
     XCTAssertTrue(viewModel.isAcrobaticSheetDisplayed)
@@ -50,7 +53,8 @@ final class AcrobaticListViewModelTest: XCTestCase {
     XCTAssertEqual(viewModel.selectedGroup, .rotation) // No reset of this property
   }
 
-  func testDidSelectAcrobaticAndSave() throws {
+  @MainActor
+  func testDidSelectAcrobaticAndSave() async throws {
     // Arrange
     let viewModel = AcrobaticListViewModel()
     guard let selectedAcrobatic = viewModel.acrobatics.first else {
@@ -59,6 +63,8 @@ final class AcrobaticListViewModelTest: XCTestCase {
 
     // Act 1
     viewModel.didSelectAcrobatic(selectedAcrobatic)
+
+    await Task.yield()
 
     // Assert 1
     XCTAssertTrue(viewModel.isAcrobaticSheetDisplayed)

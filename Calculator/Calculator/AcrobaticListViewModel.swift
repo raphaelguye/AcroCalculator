@@ -40,10 +40,14 @@ public class AcrobaticListViewModel: ObservableObject {
 
 extension AcrobaticListViewModel {
   func didSelectAcrobatic(_ acrobatic: Acrobatic) {
-    isAcrobaticSheetDisplayed = true
-    selectedAcrobaticIndex = acrobatics.firstIndex { acrobatic.id == $0.id }
-    if let index = selectedAcrobaticIndex {
-      selectedGroup = acrobatics[index].group
+    Task {
+      await MainActor.run {
+        isAcrobaticSheetDisplayed = true
+        selectedAcrobaticIndex = acrobatics.firstIndex { acrobatic.id == $0.id }
+        if let index = selectedAcrobaticIndex {
+          selectedGroup = acrobatics[index].group
+        }
+      }
     }
   }
 

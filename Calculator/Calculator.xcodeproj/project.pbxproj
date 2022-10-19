@@ -12,6 +12,7 @@
 		F7C720B828FD7FF100BB604A /* AcrobaticListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C720B728FD7FF100BB604A /* AcrobaticListViewModel.swift */; };
 		F7C720FB28FEE61400BB604A /* Acrobatic.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C720FA28FEE61400BB604A /* Acrobatic.swift */; };
 		F7C720FE2900246600BB604A /* AcrobaticListViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C720FD2900246600BB604A /* AcrobaticListViewModelTest.swift */; };
+		F7C8C2B6290052CF00F69E9C /* CompositionListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C8C2B5290052CF00F69E9C /* CompositionListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +32,7 @@
 		F7C720B728FD7FF100BB604A /* AcrobaticListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcrobaticListViewModel.swift; sourceTree = "<group>"; };
 		F7C720FA28FEE61400BB604A /* Acrobatic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Acrobatic.swift; sourceTree = "<group>"; };
 		F7C720FD2900246600BB604A /* AcrobaticListViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcrobaticListViewModelTest.swift; sourceTree = "<group>"; };
+		F7C8C2B5290052CF00F69E9C /* CompositionListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompositionListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				F7C720FA28FEE61400BB604A /* Acrobatic.swift */,
+				F7C8C2B5290052CF00F69E9C /* CompositionListView.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -208,6 +211,7 @@
 				F7C720B628FD7FA700BB604A /* AcrobaticListView.swift in Sources */,
 				F7C720FB28FEE61400BB604A /* Acrobatic.swift in Sources */,
 				F7C720B828FD7FF100BB604A /* AcrobaticListViewModel.swift in Sources */,
+				F7C8C2B6290052CF00F69E9C /* CompositionListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

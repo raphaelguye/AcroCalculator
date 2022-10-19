@@ -42,7 +42,7 @@ extension AcrobaticListView {
         }.pickerStyle(WheelPickerStyle())
         List {
           detailCell("Entrance") {
-            //TODO:
+
           }
           detailCell("1st element") {
             //TODO:
@@ -77,12 +77,14 @@ extension AcrobaticListView {
   }
 
   private func detailCell(_ placeholder: String, action: @escaping () -> Void) -> some View {
-    Button(action: action) {
+    NavigationLink {
+      CompositionListView()
+        .navigationTitle(placeholder)
+    } label: {
       HStack {
         Text(placeholder)
         Spacer()
         Text("selection")
-        Image(systemName: "chevron.right").font(.body)
       }
     }
   }
