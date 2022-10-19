@@ -4,11 +4,13 @@ import SwiftUI
 
 public struct AcrobaticListView: View {
 
-  @ObservedObject var viewModel: AcrobaticListViewModel
+  // MARK: Lifecycle
 
   public init(viewModel: AcrobaticListViewModel) {
     self.viewModel = viewModel
   }
+
+  // MARK: Public
 
   public var body: some View {
     content
@@ -16,6 +18,23 @@ public struct AcrobaticListView: View {
         acrobaticSheet
       }
   }
+
+  // MARK: Internal
+
+  @ObservedObject var viewModel: AcrobaticListViewModel
+
+  // MARK: Private
+
+  private var groupPickerStyle: some PickerStyle {
+    get {
+      #if os(macOS)
+      SegmentedPickerStyle()
+      #else
+      WheelPickerStyle()
+      #endif
+    }
+  }
+
 }
 
 extension AcrobaticListView {
@@ -34,7 +53,7 @@ extension AcrobaticListView {
         ForEach($viewModel.groups) { group in
           Text(group.wrappedValue.description)
         }
-      }.pickerStyle(WheelPickerStyle())
+      }.pickerStyle(groupPickerStyle)
       List {
         Text("Entrance")
         Text("1st element")
