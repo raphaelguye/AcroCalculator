@@ -16,6 +16,7 @@ public class CompositionListViewModel: ObservableObject {
   let compositionType: CompositionType
   let acrobaticRepository: AcrobaticRepositoryProtocol
   @Published var figures: [Figure] = []
+  @Published var selectedFigure: Figure?
 
 }
 
@@ -26,5 +27,17 @@ extension CompositionListViewModel {
     case .firstFigure: figures = acrobaticRepository.fetchFigures()
     case .landing: figures = acrobaticRepository.fetchLandings()
     }
+  }
+
+  func didSelectFigure(_ figure: Figure) {
+    Task {
+      await MainActor.run {
+        selectedFigure = figure
+      }
+    }
+  }
+
+  func isFigureSelected(_ figure: Figure) -> Bool {
+    figure == selectedFigure
   }
 }

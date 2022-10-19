@@ -21,7 +21,17 @@ struct CompositionListView: View {
 extension CompositionListView {
   private var content: some View {
     List(viewModel.figures) { figure in
-      Text(figure.title)
+      Button {
+        viewModel.didSelectFigure(figure)
+      } label: {
+        HStack {
+          Text(figure.title)
+          Spacer()
+          if viewModel.isFigureSelected(figure) {
+            Image(systemName: "checkmark")
+          }
+        }
+      }
     }
   }
 }
@@ -33,8 +43,7 @@ struct CompositionListView_Previews: PreviewProvider {
     CompositionListView(
       viewModel: CompositionListViewModel(
         compositionType: .firstFigure,
-        acrobaticRepository: FakeAcrobaticRepository()
-      )
+        acrobaticRepository: FakeAcrobaticRepository())
     )
   }
 }
