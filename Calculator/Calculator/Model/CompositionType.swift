@@ -1,11 +1,11 @@
 import Foundation
 
-public enum CompositionType {
+enum CompositionType {
   case entrance
   case firstFigure
   case landing
 
-  public var description: String {
+  var description: String {
     switch self {
     case .entrance: return "Entrance"
     case .firstFigure: return "1st element"

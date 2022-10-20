@@ -17,6 +17,7 @@
 		F7C8C2BE290057A200F69E9C /* CompositionListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C8C2BD290057A200F69E9C /* CompositionListViewModel.swift */; };
 		F7C8C2C029009E1D00F69E9C /* Figure.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C8C2BF29009E1D00F69E9C /* Figure.swift */; };
 		F7C8C2C429009F8200F69E9C /* CompositionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C8C2C329009F8200F69E9C /* CompositionType.swift */; };
+		F7E934F22901A0FD0083B9DD /* CompositionListViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E934F12901A0FD0083B9DD /* CompositionListViewModelTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +42,7 @@
 		F7C8C2BD290057A200F69E9C /* CompositionListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompositionListViewModel.swift; sourceTree = "<group>"; };
 		F7C8C2BF29009E1D00F69E9C /* Figure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Figure.swift; sourceTree = "<group>"; };
 		F7C8C2C329009F8200F69E9C /* CompositionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompositionType.swift; sourceTree = "<group>"; };
+		F7E934F12901A0FD0083B9DD /* CompositionListViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompositionListViewModelTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				F7C720FD2900246600BB604A /* AcrobaticListViewModelTest.swift */,
+				F7E934F12901A0FD0083B9DD /* CompositionListViewModelTest.swift */,
 			);
 			path = CalculatorTests;
 			sourceTree = "<group>";
@@ -252,6 +255,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F7C720FE2900246600BB604A /* AcrobaticListViewModelTest.swift in Sources */,
+				F7E934F22901A0FD0083B9DD /* CompositionListViewModelTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
