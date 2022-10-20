@@ -41,15 +41,9 @@ extension AcrobaticListView {
           }
         }.pickerStyle(WheelPickerStyle())
         List {
-          detailCell(for: .entrance) {
-            //TODO:
-          }
-          detailCell(for: .firstFigure) {
-            //TODO:
-          }
-          detailCell(for: .landing) {
-            //TODO:
-          }
+          detailCell(for: .entrance, selectionBinding: $viewModel.selectedEntrance)
+          detailCell(for: .firstFigure, selectionBinding: $viewModel.selectedFirstElement)
+          detailCell(for: .landing, selectionBinding: $viewModel.selectedLanding)
         }
         Spacer()
       }
@@ -76,11 +70,16 @@ extension AcrobaticListView {
     }
   }
 
-  private func detailCell(for compositionType: CompositionType, action: @escaping () -> Void) -> some View {
+  private func detailCell(
+    for compositionType: CompositionType,
+    selectionBinding: Binding<Figure?>)
+    -> some View
+  {
     NavigationLink {
       CompositionListView(
         viewModel: CompositionListViewModel(
           compositionType: compositionType,
+          selectedFigure: selectionBinding,
           acrobaticRepository: FakeAcrobaticRepository() //TODO: Inject a repository received in parameter of the module
         )
       )
@@ -89,7 +88,7 @@ extension AcrobaticListView {
       HStack {
         Text(compositionType.description)
         Spacer()
-        Text("selection")
+        Text(viewModel.getSelectedFigureTitle(for: compositionType) ?? "")
       }
     }
   }

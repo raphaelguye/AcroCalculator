@@ -1,4 +1,5 @@
 import Foundation
+import SwiftUI
 
 // MARK: - CompositionListViewModel
 
@@ -6,9 +7,10 @@ public class CompositionListViewModel: ObservableObject {
 
   // MARK: Lifecycle
 
-  init(compositionType: CompositionType, acrobaticRepository: AcrobaticRepositoryProtocol) {
+  init(compositionType: CompositionType, selectedFigure: Binding<Figure?>, acrobaticRepository: AcrobaticRepositoryProtocol) {
     self.compositionType = compositionType
     self.acrobaticRepository = acrobaticRepository
+    _selectedFigureBinded = selectedFigure
   }
 
   // MARK: Internal
@@ -16,8 +18,13 @@ public class CompositionListViewModel: ObservableObject {
   let compositionType: CompositionType
   let acrobaticRepository: AcrobaticRepositoryProtocol
   @Published var figures: [Figure] = []
-  @Published var selectedFigure: Figure?
+  @Binding private var selectedFigureBinded: Figure?
 
+  @Published var selectedFigure: Figure? {
+    didSet {
+      selectedFigureBinded = selectedFigure
+    }
+  }
 }
 
 extension CompositionListViewModel {

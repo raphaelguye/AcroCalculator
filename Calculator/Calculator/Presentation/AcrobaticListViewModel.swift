@@ -34,6 +34,9 @@ public class AcrobaticListViewModel: ObservableObject {
   @Published var groups: [AcrobaticGroup]
   @Published var isAcrobaticSheetDisplayed = false
   @Published var selectedGroup: AcrobaticGroup = .notAssigned
+  @Published var selectedEntrance: Figure?
+  @Published var selectedFirstElement: Figure?
+  @Published var selectedLanding: Figure?
 
   var selectedAcrobaticIndex: Int?
 }
@@ -60,6 +63,14 @@ extension AcrobaticListViewModel {
       acrobatics[index].group = selectedGroup
     }
     resetSheetSelection()
+  }
+
+  func getSelectedFigureTitle(for compositionType: CompositionType) -> String? {
+    switch compositionType {
+    case .entrance: return selectedEntrance?.title
+    case .firstFigure: return selectedFirstElement?.title
+    case .landing: return selectedLanding?.title
+    }
   }
 }
 

@@ -43,6 +43,7 @@ struct CompositionListView_Previews: PreviewProvider {
     CompositionListView(
       viewModel: CompositionListViewModel(
         compositionType: .firstFigure,
+        selectedFigure: .constant(.init(title: "figure")),
         acrobaticRepository: FakeAcrobaticRepository())
     )
   }
