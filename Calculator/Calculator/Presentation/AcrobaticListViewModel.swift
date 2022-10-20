@@ -49,6 +49,9 @@ extension AcrobaticListViewModel {
         selectedAcrobaticIndex = acrobatics.firstIndex { acrobatic.id == $0.id }
         if let index = selectedAcrobaticIndex {
           selectedGroup = acrobatics[index].group
+          selectedEntrance = acrobatics[index].entrance
+          selectedFirstElement = acrobatics[index].firstElement
+          selectedLanding = acrobatics[index].landing
         }
       }
     }
@@ -61,6 +64,9 @@ extension AcrobaticListViewModel {
   func didSaveSheet() {
     if let index = selectedAcrobaticIndex {
       acrobatics[index].group = selectedGroup
+      acrobatics[index].entrance = selectedEntrance
+      acrobatics[index].firstElement = selectedFirstElement
+      acrobatics[index].landing = selectedLanding
     }
     resetSheetSelection()
   }

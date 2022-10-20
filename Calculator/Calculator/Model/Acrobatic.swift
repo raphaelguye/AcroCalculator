@@ -7,6 +7,9 @@ public struct Acrobatic: Identifiable {
   public var id = UUID.init().uuidString
   public var position: Int
   public var group: AcrobaticGroup = .notAssigned
+  public var entrance: Figure?
+  public var firstElement: Figure?
+  public var landing: Figure?
 
 }
 

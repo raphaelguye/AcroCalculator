@@ -63,6 +63,9 @@ extension AcrobaticListView {
             .fontWeight(.bold)
           if acrobatic.isFilled() {
             Text(acrobatic.group.description)
+            Text(acrobatic.entrance?.title ?? "")
+            Text(acrobatic.firstElement?.title ?? "")
+            Text(acrobatic.landing?.title ?? "")
           }
         }
         Spacer()
