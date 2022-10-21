@@ -7,25 +7,26 @@ public class AcrobaticListViewModel: ObservableObject {
 
   // MARK: Lifecycle
 
-  private init(nbOfAcrobatics: Int, acrobatics: [Acrobatic]) {
+  private init(acrobaticRepository: AcrobaticRepositoryProtocol, nbOfAcrobatics: Int, acrobatics: [Acrobatic]) {
     groups = [.notAssigned, .forward, .backward, .dive, .rotation]
+    self.acrobaticRepository = acrobaticRepository
     self.acrobatics = acrobatics
   }
 
-  public convenience init(acrobatics: [Acrobatic]) {
-    self.init(nbOfAcrobatics: acrobatics.count, acrobatics: acrobatics)
+  public convenience init(acrobaticRepository: AcrobaticRepositoryProtocol, acrobatics: [Acrobatic]) {
+    self.init(acrobaticRepository: acrobaticRepository, nbOfAcrobatics: acrobatics.count, acrobatics: acrobatics)
   }
 
-  public convenience init(nbOfAcrobatics: Int) {
+  public convenience init(acrobaticRepository: AcrobaticRepositoryProtocol, nbOfAcrobatics: Int) {
     var acrobatics: [Acrobatic] = []
     for i in 0..<nbOfAcrobatics {
       acrobatics.append(.init(position: i+1))
     }
-    self.init(nbOfAcrobatics: nbOfAcrobatics, acrobatics: acrobatics)
+    self.init(acrobaticRepository: acrobaticRepository, nbOfAcrobatics: nbOfAcrobatics, acrobatics: acrobatics)
   }
 
-  public convenience init() {
-    self.init(nbOfAcrobatics: 6)
+  public convenience init(acrobaticRepository: AcrobaticRepositoryProtocol) {
+    self.init(acrobaticRepository: acrobaticRepository, nbOfAcrobatics: 6)
   }
 
   // MARK: Internal
@@ -39,9 +40,21 @@ public class AcrobaticListViewModel: ObservableObject {
   @Published var selectedLanding: Figure?
 
   var selectedAcrobaticIndex: Int?
+
+  // MARK: Private
+
+  private var acrobaticRepository: AcrobaticRepositoryProtocol
 }
 
 extension AcrobaticListViewModel {
+
+  func createCompositionListViewModel(for compositionType: CompositionType, selectionBinding: Binding<Figure?>) -> CompositionListViewModel {
+    CompositionListViewModel(
+      compositionType: compositionType,
+      selectedFigure: selectionBinding,
+      acrobaticRepository: acrobaticRepository)
+  }
+
   func didSelectAcrobatic(_ acrobatic: Acrobatic) {
     Task {
       await MainActor.run {

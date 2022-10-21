@@ -12,9 +12,9 @@ public struct MCFreestyleRootView: View {
   public var body: some View {
     NavigationView {
       AcrobaticListView(
-        viewModel: AcrobaticListViewModel()
+        viewModel: AcrobaticListViewModel(acrobaticRepository: MCFreestyleRepository())
       )
-      .navigationTitle("MC Freestyle")
+      .navigationTitle("Main Class Freestyle")
     }
   }
 }

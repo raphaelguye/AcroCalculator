@@ -80,11 +80,7 @@ extension AcrobaticListView {
   {
     NavigationLink {
       CompositionListView(
-        viewModel: CompositionListViewModel(
-          compositionType: compositionType,
-          selectedFigure: selectionBinding,
-          acrobaticRepository: FakeAcrobaticRepository() //TODO: Inject a repository received in parameter of the module
-        )
+        viewModel: viewModel.createCompositionListViewModel(for: compositionType, selectionBinding: selectionBinding)
       )
       .navigationTitle(compositionType.description)
     } label: {
@@ -122,12 +118,12 @@ struct AcrobaticListView_Previews: PreviewProvider {
   static var previews: some View {
     AcrobaticListView(
       viewModel: AcrobaticListViewModel(
+        acrobaticRepository: FakeAcrobaticRepository(),
         acrobatics: [
           .init(position: 1, group: .forward),
           .init(position: 2, group: .dive),
           .init(position: 3),
-        ]
-      )
+        ])
     )
   }
 }

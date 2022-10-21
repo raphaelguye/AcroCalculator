@@ -1,4 +1,5 @@
 import XCTest
+import SwiftUI
 @testable import Calculator
 
 final class AcrobaticListViewModelTest: XCTestCase {
@@ -7,27 +8,39 @@ final class AcrobaticListViewModelTest: XCTestCase {
 
   func testInit() throws {
     let defaultNbOfAcrobatics = 6
-    let viewModel = AcrobaticListViewModel()
+    let viewModel = AcrobaticListViewModel(acrobaticRepository: FakeAcrobaticRepository())
     assertViewModelInitialized(viewModel, nbOfAcrobatics: defaultNbOfAcrobatics)
   }
 
   func testInitNbOfAcrobatics() throws {
     let nbOfAcrobatics = 3
-    let viewModel = AcrobaticListViewModel(nbOfAcrobatics: nbOfAcrobatics)
+    let viewModel = AcrobaticListViewModel(acrobaticRepository: FakeAcrobaticRepository(), nbOfAcrobatics: nbOfAcrobatics)
     assertViewModelInitialized(viewModel, nbOfAcrobatics: nbOfAcrobatics)
   }
 
   func testInitListOfAcrobatics() throws {
     let acrobatics: [Acrobatic] = [.init(position: 1), .init(position: 2)]
     let nbOfAcrobatics = acrobatics.count
-    let viewModel = AcrobaticListViewModel(acrobatics: acrobatics)
+    let viewModel = AcrobaticListViewModel(acrobaticRepository: FakeAcrobaticRepository(), acrobatics: acrobatics)
     assertViewModelInitialized(viewModel, nbOfAcrobatics: nbOfAcrobatics)
+  }
+
+  func testCreateCompositionListViewModel() {
+    // Arrange
+    let selectedFigure: Binding<Figure?> = .constant(.init(title: "figure"))
+    let viewModel = AcrobaticListViewModel(acrobaticRepository: FakeAcrobaticRepository())
+
+    // Act
+    let compositionListViewModel = viewModel.createCompositionListViewModel(for: .entrance, selectionBinding: selectedFigure)
+
+    // Arrange
+    XCTAssertNotNil(compositionListViewModel)
   }
 
   @MainActor
   func testDidSelectAcrobaticAndCancel() async throws {
     // Arrange
-    let viewModel = AcrobaticListViewModel()
+    let viewModel = AcrobaticListViewModel(acrobaticRepository: FakeAcrobaticRepository())
     guard let selectedAcrobatic = viewModel.acrobatics.first else {
       throw NSError()
     }
@@ -64,7 +77,7 @@ final class AcrobaticListViewModelTest: XCTestCase {
   @MainActor
   func testDidSelectAcrobaticAndSave() async throws {
     // Arrange
-    let viewModel = AcrobaticListViewModel()
+    let viewModel = AcrobaticListViewModel(acrobaticRepository: FakeAcrobaticRepository())
     guard let selectedAcrobatic = viewModel.acrobatics.first else {
       throw NSError()
     }

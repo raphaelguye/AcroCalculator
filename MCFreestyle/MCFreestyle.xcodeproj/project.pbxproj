@@ -12,6 +12,7 @@
 		F7C7208D28FD7BDA00BB604A /* MCFreestyleRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C7208C28FD7BDA00BB604A /* MCFreestyleRootView.swift */; };
 		F7C720BB28FD834300BB604A /* Calculator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7C720BA28FD834300BB604A /* Calculator.framework */; };
 		F7C720BC28FD834300BB604A /* Calculator.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F7C720BA28FD834300BB604A /* Calculator.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F7E934F629027C6C0083B9DD /* MCFreestyleRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E934F529027C6C0083B9DD /* MCFreestyleRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		F7C7208128FD7BA300BB604A /* MCFreestyleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCFreestyleTests.swift; sourceTree = "<group>"; };
 		F7C7208C28FD7BDA00BB604A /* MCFreestyleRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCFreestyleRootView.swift; sourceTree = "<group>"; };
 		F7C720BA28FD834300BB604A /* Calculator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Calculator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7E934F529027C6C0083B9DD /* MCFreestyleRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCFreestyleRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,7 +90,8 @@
 		F7C7207628FD7BA300BB604A /* MCFreestyle */ = {
 			isa = PBXGroup;
 			children = (
-				F7C7208C28FD7BDA00BB604A /* MCFreestyleRootView.swift */,
+				F7E934F429027B850083B9DD /* Repository */,
+				F7E934F329027B7E0083B9DD /* Presentation */,
 			);
 			path = MCFreestyle;
 			sourceTree = "<group>";
@@ -107,6 +110,22 @@
 				F7C720BA28FD834300BB604A /* Calculator.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F7E934F329027B7E0083B9DD /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				F7C7208C28FD7BDA00BB604A /* MCFreestyleRootView.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		F7E934F429027B850083B9DD /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				F7E934F529027C6C0083B9DD /* MCFreestyleRepository.swift */,
+			);
+			path = Repository;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -220,6 +239,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F7C7208D28FD7BDA00BB604A /* MCFreestyleRootView.swift in Sources */,
+				F7E934F629027C6C0083B9DD /* MCFreestyleRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
