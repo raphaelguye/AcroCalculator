@@ -11,7 +11,6 @@
 		F7C7208228FD7BA300BB604A /* MCFreestyleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C7208128FD7BA300BB604A /* MCFreestyleTests.swift */; };
 		F7C7208D28FD7BDA00BB604A /* MCFreestyleRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C7208C28FD7BDA00BB604A /* MCFreestyleRootView.swift */; };
 		F7C720BB28FD834300BB604A /* Calculator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7C720BA28FD834300BB604A /* Calculator.framework */; };
-		F7C720BC28FD834300BB604A /* Calculator.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F7C720BA28FD834300BB604A /* Calculator.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F7E934F629027C6C0083B9DD /* MCFreestyleRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E934F529027C6C0083B9DD /* MCFreestyleRepository.swift */; };
 /* End PBXBuildFile section */
 
@@ -24,20 +23,6 @@
 			remoteInfo = MCFreestyle;
 		};
 /* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		F7C720BD28FD834300BB604A /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				F7C720BC28FD834300BB604A /* Calculator.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		F7C7207428FD7BA300BB604A /* MCFreestyle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MCFreestyle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -149,7 +134,6 @@
 				F7C7207028FD7BA300BB604A /* Sources */,
 				F7C7207128FD7BA300BB604A /* Frameworks */,
 				F7C7207228FD7BA300BB604A /* Resources */,
-				F7C720BD28FD834300BB604A /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -380,7 +364,6 @@
 		F7C7208728FD7BA300BB604A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -417,7 +400,6 @@
 		F7C7208828FD7BA300BB604A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
