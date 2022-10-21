@@ -41,6 +41,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		53BF52DC2902F6F700557A53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		F7C720C728FEDE8700BB604A /* AcroCalculatorApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AcroCalculatorApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7C720CA28FEDE8700BB604A /* AcroCalculatorAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcroCalculatorAppApp.swift; sourceTree = "<group>"; };
 		F7C720CC28FEDE8700BB604A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -93,6 +94,7 @@
 		F7C720C928FEDE8700BB604A /* AcroCalculatorApp */ = {
 			isa = PBXGroup;
 			children = (
+				53BF52DC2902F6F700557A53 /* Info.plist */,
 				F7C720CA28FEDE8700BB604A /* AcroCalculatorAppApp.swift */,
 				F7C720CC28FEDE8700BB604A /* ContentView.swift */,
 				F7C720CE28FEDE8800BB604A /* Assets.xcassets */,
@@ -374,6 +376,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AcroCalculatorApp/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Acro Calculator";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.sports";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
@@ -417,6 +420,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AcroCalculatorApp/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Acro Calculator";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.sports";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
