@@ -14,6 +14,8 @@
 		F7C720DD28FEDE8800BB604A /* AcroCalculatorAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C720DC28FEDE8800BB604A /* AcroCalculatorAppTests.swift */; };
 		F7C720F728FEDED200BB604A /* MCFreestyle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7C720F628FEDED200BB604A /* MCFreestyle.framework */; };
 		F7C720F828FEDED200BB604A /* MCFreestyle.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F7C720F628FEDED200BB604A /* MCFreestyle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F7E934F829034A250083B9DD /* Calculator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7E934F729034A250083B9DD /* Calculator.framework */; };
+		F7E934F929034A250083B9DD /* Calculator.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F7E934F729034A250083B9DD /* Calculator.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +35,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				F7E934F929034A250083B9DD /* Calculator.framework in Embed Frameworks */,
 				F7C720F828FEDED200BB604A /* MCFreestyle.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -51,6 +54,7 @@
 		F7C720D828FEDE8800BB604A /* AcroCalculatorAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AcroCalculatorAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7C720DC28FEDE8800BB604A /* AcroCalculatorAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcroCalculatorAppTests.swift; sourceTree = "<group>"; };
 		F7C720F628FEDED200BB604A /* MCFreestyle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MCFreestyle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7E934F729034A250083B9DD /* Calculator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Calculator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7E934F829034A250083B9DD /* Calculator.framework in Frameworks */,
 				F7C720F728FEDED200BB604A /* MCFreestyle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -123,6 +128,7 @@
 		F7C720F528FEDED200BB604A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F7E934F729034A250083B9DD /* Calculator.framework */,
 				F7C720F628FEDED200BB604A /* MCFreestyle.framework */,
 			);
 			name = Frameworks;
