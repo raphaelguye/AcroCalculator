@@ -17,7 +17,7 @@ class CompositionListViewModel: ObservableObject {
 
   @Published var figures: [Figure] = []
 
-  @Published var selectedFigure: Figure? {
+  @Published private(set) var selectedFigure: Figure? {
     didSet {
       selectedFigureBinded = selectedFigure
     }
