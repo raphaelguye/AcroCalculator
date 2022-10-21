@@ -8,16 +8,20 @@ public protocol AcrobaticRepositoryProtocol {
 
 struct FakeAcrobaticRepository: AcrobaticRepositoryProtocol {
 
+  static let entrancesSample: [Figure] = [.init(title: "Staff"), .init(title: "Bettarini")]
+  static let figuresSample: [Figure] = [.init(title: "Tucked"), .init(title: "Picked"), .init(title: "Straight")]
+  static let landingSample: [Figure] = [.init(title: "Standard"), .init(title: "Between legs of partner"), .init(title: "On waist facing partner")]
+
   func fetchEntrances() -> [Figure] {
-    [.init(title: "Staff"), .init(title: "Bettarini")]
+    Self.entrancesSample
   }
 
   func fetchFigures() -> [Figure] {
-    [.init(title: "Tucked"), .init(title: "Picked"), .init(title: "Straight")]
+    Self.figuresSample
   }
 
   func fetchLandings() -> [Figure] {
-    [.init(title: "Standard"), .init(title: "Between legs of partner"), .init(title: "On waist facing partner")]
+    Self.landingSample
   }
 
 }
