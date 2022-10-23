@@ -36,6 +36,7 @@ public class AcrobaticListViewModel: ObservableObject {
   @Published var isAcrobaticSheetDisplayed = false
   @Published var selectedGroup: AcrobaticGroup = .notAssigned
   @Published var selectedQuotation: Int = 0
+  @Published var routineQuotation: Int = 0
 
   var selectedAcrobaticIndex: Int?
 
@@ -79,6 +80,7 @@ extension AcrobaticListViewModel {
           selectedEntrance = acrobatics[index].entrance
           selectedFirstElement = acrobatics[index].firstElement
           selectedLanding = acrobatics[index].landing
+          selectedQuotation = acrobatics[index].quotation
         }
       }
     }
@@ -95,6 +97,7 @@ extension AcrobaticListViewModel {
       acrobatics[index].firstElement = selectedFirstElement
       acrobatics[index].landing = selectedLanding
     }
+    updateRoutineQuotation()
     resetSheetSelection()
   }
 
@@ -114,6 +117,14 @@ extension AcrobaticListViewModel {
         (selectedFirstElement?.quotation ?? 0) +
         (selectedLanding?.quotation ?? 0)
     }
+  }
+
+  private func updateRoutineQuotation() {
+    var score = 0
+    for acrobatic in acrobatics {
+      score = score + acrobatic.quotation
+    }
+    routineQuotation = score
   }
 
   private func resetSheetSelection() {

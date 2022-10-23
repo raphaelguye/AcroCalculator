@@ -14,9 +14,18 @@ public struct Acrobatic: Identifiable {
 }
 
 extension Acrobatic {
+  public var quotation: Int {
+    get {
+      (entrance?.quotation ?? 0) +
+        (firstElement?.quotation ?? 0) +
+        (landing?.quotation ?? 0)
+    }
+  }
+
   public func isFilled() -> Bool {
     group != .notAssigned
   }
+
 }
 
 // MARK: - AcrobaticGroup

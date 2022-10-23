@@ -27,8 +27,16 @@ public struct AcrobaticListView: View {
 
 extension AcrobaticListView {
   private var content: some View {
-    List(viewModel.acrobatics) { acrobatic in
-      listCell(for: acrobatic)
+    VStack {
+      List(viewModel.acrobatics) { acrobatic in
+        listCell(for: acrobatic)
+      }
+      HStack {
+        Spacer()
+        Text("Total score: ")
+        Text("\(viewModel.routineQuotation)")
+        Spacer()
+      }.font(.title).padding()
     }
   }
 
