@@ -41,9 +41,19 @@ extension AcrobaticListView {
           }
         }.pickerStyle(WheelPickerStyle())
         List {
-          detailCell(for: .entrance, selectionBinding: $viewModel.selectedEntrance)
-          detailCell(for: .firstFigure, selectionBinding: $viewModel.selectedFirstElement)
-          detailCell(for: .landing, selectionBinding: $viewModel.selectedLanding)
+          Section {
+            detailCell(for: .entrance, selectionBinding: $viewModel.selectedEntrance)
+            detailCell(for: .firstFigure, selectionBinding: $viewModel.selectedFirstElement)
+            detailCell(for: .landing, selectionBinding: $viewModel.selectedLanding)
+          }
+          Section {
+            HStack {
+              Spacer()
+              Text("Score: ")
+              Text("\(viewModel.selectedQuotation)")
+              Spacer()
+            }.font(.title).padding()
+          }
         }
         Spacer()
       }

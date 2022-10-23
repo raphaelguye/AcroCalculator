@@ -35,11 +35,25 @@ public class AcrobaticListViewModel: ObservableObject {
   @Published var groups: [AcrobaticGroup]
   @Published var isAcrobaticSheetDisplayed = false
   @Published var selectedGroup: AcrobaticGroup = .notAssigned
-  @Published var selectedEntrance: Figure?
-  @Published var selectedFirstElement: Figure?
-  @Published var selectedLanding: Figure?
+  @Published var selectedQuotation: Int = 0
 
   var selectedAcrobaticIndex: Int?
+
+  @Published var selectedEntrance: Figure? {
+    didSet {
+      updateSelectedQuotation(selectedFigure: selectedEntrance)
+    }
+  }
+  @Published var selectedLanding: Figure? {
+    didSet {
+      updateSelectedQuotation(selectedFigure: selectedLanding)
+    }
+  }
+  @Published var selectedFirstElement: Figure? {
+    didSet {
+      updateSelectedQuotation(selectedFigure: selectedFirstElement)
+    }
+  }
 
   // MARK: Private
 
@@ -94,6 +108,14 @@ extension AcrobaticListViewModel {
 }
 
 extension AcrobaticListViewModel {
+  private func updateSelectedQuotation(selectedFigure: Figure?) {
+    if selectedFigure != nil {
+      selectedQuotation = (selectedEntrance?.quotation ?? 0) +
+        (selectedFirstElement?.quotation ?? 0) +
+        (selectedLanding?.quotation ?? 0)
+    }
+  }
+
   private func resetSheetSelection() {
     isAcrobaticSheetDisplayed = false
     selectedAcrobaticIndex = nil
