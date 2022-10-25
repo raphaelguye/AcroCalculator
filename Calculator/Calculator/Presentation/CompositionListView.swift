@@ -15,6 +15,7 @@ struct CompositionListView: View {
       }
   }
 
+  @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
   @StateObject var viewModel: CompositionListViewModel
 }
 
@@ -23,6 +24,7 @@ extension CompositionListView {
     List(viewModel.figures) { figure in
       Button {
         viewModel.didSelectFigure(figure)
+        self.presentationMode.wrappedValue.dismiss()
       } label: {
         HStack {
           Text(figure.title)
