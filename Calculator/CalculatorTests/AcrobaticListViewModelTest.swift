@@ -81,9 +81,9 @@ final class AcrobaticListViewModelTest: XCTestCase {
     guard let selectedAcrobatic = viewModel.acrobatics.first else {
       throw NSError()
     }
-    let entrance = Figure(title: "entrance")
-    let firstElement = Figure(title: "first")
-    let landing = Figure(title: "landing")
+    let entrance = Figure(title: "entrance", quotation: 1)
+    let firstElement = Figure(title: "first", quotation: 2)
+    let landing = Figure(title: "landing", quotation: 3)
 
     // Act 1
     viewModel.didSelectAcrobatic(selectedAcrobatic)
@@ -98,15 +98,25 @@ final class AcrobaticListViewModelTest: XCTestCase {
     XCTAssertNil(viewModel.selectedEntrance)
     XCTAssertNil(viewModel.selectedFirstElement)
     XCTAssertNil(viewModel.selectedLanding)
+    var expectedQuotation = (viewModel.selectedEntrance?.quotation ?? 0) + (viewModel.selectedFirstElement?.quotation ?? 0) + (viewModel.selectedLanding?.quotation ?? 0)
+    XCTAssertEqual(expectedQuotation, viewModel.selectedQuotation)
+    XCTAssertEqual(0, viewModel.routineQuotation)
 
     // Act 2
     viewModel.selectedGroup = .rotation
     viewModel.selectedEntrance = entrance
     viewModel.selectedFirstElement = firstElement
     viewModel.selectedLanding = landing
-    viewModel.didSaveSheet()
 
     // Assert 2
+    expectedQuotation = entrance.quotation + firstElement.quotation + landing.quotation
+    XCTAssertEqual(expectedQuotation, viewModel.selectedQuotation)
+    XCTAssertEqual(0, viewModel.routineQuotation)
+
+    // Act 3
+    viewModel.didSaveSheet()
+
+    // Assert 3
     sleep(5)
     XCTAssertEqual(viewModel.acrobatics.first?.group, .rotation)
     XCTAssertEqual(viewModel.acrobatics.first?.entrance, entrance)
@@ -114,15 +124,38 @@ final class AcrobaticListViewModelTest: XCTestCase {
     XCTAssertEqual(viewModel.acrobatics.first?.landing, landing)
     XCTAssertFalse(viewModel.isAcrobaticSheetDisplayed)
     XCTAssertNil(viewModel.selectedAcrobaticIndex)
+    XCTAssertEqual(expectedQuotation, viewModel.selectedQuotation)
+    XCTAssertEqual(expectedQuotation, viewModel.routineQuotation)
 
-    // Act 3
+    // Act 4
     viewModel.didSelectAcrobatic(selectedAcrobatic)
 
-    // Assert 3
+    // Assert 4
     XCTAssertEqual(viewModel.selectedGroup, .rotation)
     XCTAssertEqual(viewModel.selectedEntrance, entrance)
     XCTAssertEqual(viewModel.selectedFirstElement, firstElement)
     XCTAssertEqual(viewModel.selectedLanding, landing)
+    XCTAssertEqual(expectedQuotation, viewModel.selectedQuotation)
+    XCTAssertEqual(expectedQuotation, viewModel.routineQuotation)
+  }
+
+  func testGetSelectedFigureTitle() {
+    // Arrange
+    let viewModel = AcrobaticListViewModel(acrobaticRepository: FakeAcrobaticRepository())
+    let entrance = Figure(title: "entrance", quotation: 1)
+    let firstElement = Figure(title: "first", quotation: 2)
+    let landing = Figure(title: "landing", quotation: 3)
+
+    // Act
+    viewModel.selectedEntrance = entrance
+    viewModel.selectedFirstElement = firstElement
+    viewModel.selectedLanding = landing
+
+    // Assert
+    XCTAssertEqual(entrance.title, viewModel.getSelectedFigureTitle(for: .entrance))
+    XCTAssertEqual(firstElement.title, viewModel.getSelectedFigureTitle(for: .firstFigure))
+    XCTAssertEqual(landing.title, viewModel.getSelectedFigureTitle(for: .landing))
+
   }
 
   // MARK: Private
