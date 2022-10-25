@@ -11,6 +11,7 @@ class CompositionListViewModel: ObservableObject {
     self.compositionType = compositionType
     self.acrobaticRepository = acrobaticRepository
     _selectedFigureBinded = selectedFigure
+    _selectedFigure = Published(wrappedValue: selectedFigureBinded)
   }
 
   // MARK: Internal
