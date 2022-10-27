@@ -7,8 +7,9 @@ class CompositionListViewModel: ObservableObject {
 
   // MARK: Lifecycle
 
-  init(compositionType: CompositionType, selectedFigure: Binding<Figure?>, acrobaticRepository: AcrobaticRepositoryProtocol) {
+  init(compositionType: CompositionType, acrobaticGroup: AcrobaticGroup, selectedFigure: Binding<Figure?>, acrobaticRepository: AcrobaticRepositoryProtocol) {
     self.compositionType = compositionType
+    self.acrobaticGroup = acrobaticGroup
     self.acrobaticRepository = acrobaticRepository
     _selectedFigureBinded = selectedFigure
     _selectedFigure = Published(wrappedValue: selectedFigureBinded)
@@ -27,6 +28,7 @@ class CompositionListViewModel: ObservableObject {
   // MARK: Private
 
   private let compositionType: CompositionType
+  private let acrobaticGroup: AcrobaticGroup
   private let acrobaticRepository: AcrobaticRepositoryProtocol
   @Binding private var selectedFigureBinded: Figure?
 
@@ -36,7 +38,7 @@ extension CompositionListViewModel {
   func onViewAppear() {
     switch compositionType {
     case .entrance: figures = acrobaticRepository.fetchEntrances()
-    case .firstFigure: figures = acrobaticRepository.fetchFigures()
+    case .firstFigure: figures = acrobaticRepository.fetchFigures(acrobaticGroup: acrobaticGroup)
     case .landing: figures = acrobaticRepository.fetchLandings()
     }
   }

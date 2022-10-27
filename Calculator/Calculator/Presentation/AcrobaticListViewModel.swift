@@ -66,6 +66,7 @@ extension AcrobaticListViewModel {
   func createCompositionListViewModel(for compositionType: CompositionType, selectionBinding: Binding<Figure?>) -> CompositionListViewModel {
     CompositionListViewModel(
       compositionType: compositionType,
+      acrobaticGroup: selectedGroup,
       selectedFigure: selectionBinding,
       acrobaticRepository: acrobaticRepository)
   }

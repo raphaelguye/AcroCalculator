@@ -2,7 +2,7 @@ import Foundation
 
 public protocol AcrobaticRepositoryProtocol {
   func fetchEntrances() -> [Figure]
-  func fetchFigures() -> [Figure]
+  func fetchFigures(acrobaticGroup: AcrobaticGroup) -> [Figure]
   func fetchLandings() -> [Figure]
 }
 
@@ -16,7 +16,7 @@ struct FakeAcrobaticRepository: AcrobaticRepositoryProtocol {
     Self.entrancesSample
   }
 
-  func fetchFigures() -> [Figure] {
+  func fetchFigures(acrobaticGroup: AcrobaticGroup) -> [Figure] {
     Self.figuresSample
   }
 
