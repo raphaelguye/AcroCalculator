@@ -28,6 +28,14 @@ extension Acrobatic {
 
 }
 
+extension Acrobatic {
+  public static let sampleList: [Acrobatic] = [
+    .init(position: 1, group: .forward, entrance: Figure.init(title: "Staff"), firstElement: .init(title: "Picked"), landing: .init(title: "Standard")),
+    .init(position: 2, group: .forward, entrance: Figure.init(title: "Bettarini"), firstElement: .init(title: "Straight"), landing: .init(title: "Standard")),
+    .init(position: 3)
+  ]
+}
+
 // MARK: - AcrobaticGroup
 
 public enum AcrobaticGroup: Identifiable {

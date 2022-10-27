@@ -76,18 +76,38 @@ extension AcrobaticListView {
       viewModel.didSelectAcrobatic(acrobatic)
     } label: {
       HStack {
-        VStack(alignment: .leading) {
-          Text("Element \(acrobatic.position)")
-            .fontWeight(.bold)
-          if acrobatic.isFilled() {
-            Text(acrobatic.group.description)
-            Text(acrobatic.entrance?.title ?? "")
-            Text(acrobatic.firstElement?.title ?? "")
-            Text(acrobatic.landing?.title ?? "")
-          }
+        if acrobatic.isFilled() {
+          acrobaticCell(for: acrobatic)
+          Spacer()
+        } else {
+          placeholderCell()
         }
+      }
+    }
+  }
+
+  private func acrobaticCell(for acrobatic: Acrobatic) -> some View {
+    VStack(alignment: .leading) {
+      HStack {
+        Text("\(acrobatic.position)") //TODO: Circle
+        Spacer()
+        Text("\(acrobatic.group.description)")
         Spacer()
       }
+//      .background(Color.green) //TODO: Color by group
+      .fontWeight(.semibold)
+      .font(.title2)
+
+      Text(acrobatic.entrance?.title ?? "")
+      Text(acrobatic.firstElement?.title ?? "")
+      Text(acrobatic.landing?.title ?? "")
+    }
+  }
+
+  private func placeholderCell() -> some View {
+    HStack {
+      Text("Select an acrobatic")
+      Spacer()
     }
   }
 
@@ -137,11 +157,7 @@ struct AcrobaticListView_Previews: PreviewProvider {
     AcrobaticListView(
       viewModel: AcrobaticListViewModel(
         acrobaticRepository: FakeAcrobaticRepository(),
-        acrobatics: [
-          .init(position: 1, group: .forward),
-          .init(position: 2, group: .dive),
-          .init(position: 3),
-        ])
+        acrobatics: Acrobatic.sampleList)
     )
   }
 }
