@@ -15,6 +15,7 @@ final class CompositionListViewModelTest: XCTestCase {
     // Act
     let viewModel = CompositionListViewModel(
       compositionType: compositionType,
+      acrobaticGroup: .forward,
       selectedFigure: selectedFigure,
       acrobaticRepository: repository)
 
@@ -40,6 +41,7 @@ final class CompositionListViewModelTest: XCTestCase {
     // Arrange
     let viewModel = CompositionListViewModel(
       compositionType: .entrance,
+      acrobaticGroup: .forward,
       selectedFigure: .constant(Figure(title: "figure")),
       acrobaticRepository: FakeAcrobaticRepository())
     let selectedFigure = Figure(title: "figure")
@@ -58,6 +60,7 @@ final class CompositionListViewModelTest: XCTestCase {
     // Arrange
     let viewModel = CompositionListViewModel(
       compositionType: .entrance,
+      acrobaticGroup: .forward,
       selectedFigure: .constant(Figure(title: "figure")),
       acrobaticRepository: FakeAcrobaticRepository())
     let selectedFigure = Figure(title: "figure")
@@ -81,6 +84,7 @@ final class CompositionListViewModelTest: XCTestCase {
     let repository = FakeAcrobaticRepository()
     let viewModel = CompositionListViewModel(
       compositionType: compositionType,
+      acrobaticGroup: .forward,
       selectedFigure: .constant(Figure(title: "figure")),
       acrobaticRepository: repository)
 
